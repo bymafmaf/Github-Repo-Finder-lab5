@@ -30,7 +30,8 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource {
         // Add SearchBar to the NavigationBar
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
-
+        repoTable.rowHeight = UITableViewAutomaticDimension
+        repoTable.estimatedRowHeight = 120
         // Perform the first search when the view controller first loads
         doSearch()
     }
@@ -43,6 +44,7 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource {
         // Perform request to GitHub API to get the list of repositories
         GithubRepo.fetchRepos(searchSettings, successCallback: { (newRepos) -> Void in
 
+            self.repos.removeAll()
             // Print the returned repositories to the output window
             for repo in newRepos {
                 print(repo)

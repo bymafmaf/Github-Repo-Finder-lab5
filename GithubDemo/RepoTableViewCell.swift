@@ -27,7 +27,7 @@ class RepoTableViewCell: UITableViewCell {
         forkLabel.text = String(describing: repo.forks!)
         authorLabel.text = "by " + repo.ownerHandle!
         descriptionLabel.text = repo.repoDescription!
-        //circleAvatar()
+        circleAvatar()
     }
     func circleAvatar(){
         avatarImage.layer.borderWidth = 1
