@@ -18,6 +18,7 @@
 		6B2DDF0E1B02970A00D25281 /* GithubRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2DDF0D1B02970A00D25281 /* GithubRepo.swift */; };
 		6B9F8B0A1B02B8E5001483E7 /* GithubRepoSearchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8B091B02B8E4001483E7 /* GithubRepoSearchSettings.swift */; };
 		D2177F721E56616900BF1822 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2177F711E56616900BF1822 /* RepoTableViewCell.swift */; };
+		D2B62E071E663EC700965489 /* SearchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B62E061E663EC700965489 /* SearchSettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6B9F8B091B02B8E4001483E7 /* GithubRepoSearchSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepoSearchSettings.swift; sourceTree = "<group>"; };
 		C31B77F051ECB4734B31A292 /* Pods_GithubDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2177F711E56616900BF1822 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		D2B62E061E663EC700965489 /* SearchSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSettingsViewController.swift; sourceTree = "<group>"; };
 		D5EDD6C651F700BECD821A77 /* Pods-GithubDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubDemo/Pods-GithubDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D787DCA4BDFFA74DC9217E77 /* Pods-GithubDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubDemo/Pods-GithubDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 				6B2DDF0D1B02970A00D25281 /* GithubRepo.swift */,
 				6B9F8B091B02B8E4001483E7 /* GithubRepoSearchSettings.swift */,
 				D2177F711E56616900BF1822 /* RepoTableViewCell.swift */,
+				D2B62E061E663EC700965489 /* SearchSettingsViewController.swift */,
 				6B2DDEF11B02911A00D25281 /* Main.storyboard */,
 				6B2DDEF41B02911A00D25281 /* Images.xcassets */,
 				6B2DDEF61B02911A00D25281 /* LaunchScreen.xib */,
@@ -162,12 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B2DDF071B02911A00D25281 /* Build configuration list for PBXNativeTarget "GithubDemo" */;
 			buildPhases = (
-				53B6AD026E789CD7847EE22B /* 📦 Check Pods Manifest.lock */,
+				53B6AD026E789CD7847EE22B /* [CP] Check Pods Manifest.lock */,
 				6B2DDEE41B02911A00D25281 /* Sources */,
 				6B2DDEE51B02911A00D25281 /* Frameworks */,
 				6B2DDEE61B02911A00D25281 /* Resources */,
-				BC3C548677979053429979CC /* 📦 Embed Pods Frameworks */,
-				E3D6F637D0CF657F4ABEEE92 /* 📦 Copy Pods Resources */,
+				BC3C548677979053429979CC /* [CP] Embed Pods Frameworks */,
+				E3D6F637D0CF657F4ABEEE92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,12 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B2DDF0A1B02911A00D25281 /* Build configuration list for PBXNativeTarget "GithubDemoTests" */;
 			buildPhases = (
-				BE4A510274D4622D5F3A614A /* 📦 Check Pods Manifest.lock */,
+				BE4A510274D4622D5F3A614A /* [CP] Check Pods Manifest.lock */,
 				6B2DDEF91B02911A00D25281 /* Sources */,
 				6B2DDEFA1B02911A00D25281 /* Frameworks */,
 				6B2DDEFB1B02911A00D25281 /* Resources */,
-				586D6F8367EB3C769533728F /* 📦 Embed Pods Frameworks */,
-				9763D9BD2908233F6B8F5266 /* 📦 Copy Pods Resources */,
+				586D6F8367EB3C769533728F /* [CP] Embed Pods Frameworks */,
+				9763D9BD2908233F6B8F5266 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,29 +263,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		53B6AD026E789CD7847EE22B /* 📦 Check Pods Manifest.lock */ = {
+		53B6AD026E789CD7847EE22B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		586D6F8367EB3C769533728F /* 📦 Embed Pods Frameworks */ = {
+		586D6F8367EB3C769533728F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,14 +293,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GithubDemoTests/Pods-GithubDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9763D9BD2908233F6B8F5266 /* 📦 Copy Pods Resources */ = {
+		9763D9BD2908233F6B8F5266 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,14 +308,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GithubDemoTests/Pods-GithubDemoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC3C548677979053429979CC /* 📦 Embed Pods Frameworks */ = {
+		BC3C548677979053429979CC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,29 +323,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GithubDemo/Pods-GithubDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BE4A510274D4622D5F3A614A /* 📦 Check Pods Manifest.lock */ = {
+		BE4A510274D4622D5F3A614A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E3D6F637D0CF657F4ABEEE92 /* 📦 Copy Pods Resources */ = {
+		E3D6F637D0CF657F4ABEEE92 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +363,7 @@
 				6B2DDEF01B02911A00D25281 /* RepoResultsViewController.swift in Sources */,
 				6B9F8B0A1B02B8E5001483E7 /* GithubRepoSearchSettings.swift in Sources */,
 				6B2DDEEE1B02911A00D25281 /* AppDelegate.swift in Sources */,
+				D2B62E071E663EC700965489 /* SearchSettingsViewController.swift in Sources */,
 				D2177F721E56616900BF1822 /* RepoTableViewCell.swift in Sources */,
 				6B2DDF0E1B02970A00D25281 /* GithubRepo.swift in Sources */,
 			);

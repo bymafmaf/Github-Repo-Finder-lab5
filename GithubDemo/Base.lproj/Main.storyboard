@@ -146,14 +146,94 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ngx-WF-RWM" secondAttribute="bottom" id="xrE-vT-wnW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="x5q-EH-pP8"/>
+                    <navigationItem key="navigationItem" id="x5q-EH-pP8">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="rs2-Gk-LAE">
+                            <connections>
+                                <segue destination="zg0-pd-9ff" kind="presentation" identifier="SettingsViewControllerSegue" id="g6r-wH-9RF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="repoTable" destination="Ngx-WF-RWM" id="0QQ-e1-MrC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818.39999999999998" y="-558.17091454272872"/>
+            <point key="canvasLocation" x="1134" y="-411"/>
+        </scene>
+        <!--Search Settings View Controller-->
+        <scene sceneID="mpK-5b-ySv">
+            <objects>
+                <viewController id="In9-Aq-RWS" customClass="SearchSettingsViewController" customModule="GithubDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lvY-9g-Jv6"/>
+                        <viewControllerLayoutGuide type="bottom" id="HfK-Z4-z2Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OHd-iu-hvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbJ-C0-qZi">
+                                <rect key="frame" x="8" y="114" width="359" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XI-9X-vHm">
+                                        <rect key="frame" x="0.0" y="13" width="114" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2g-zK-GtB">
+                                        <rect key="frame" x="348" y="13" width="11" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100000" translatesAutoresizingMaskIntoConstraints="NO" id="j3T-a8-ZXA">
+                                        <rect key="frame" x="131" y="8" width="211" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="In9-Aq-RWS" eventType="valueChanged" id="nrA-Br-PmF"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="j3T-a8-ZXA" firstAttribute="leading" secondItem="3XI-9X-vHm" secondAttribute="trailing" constant="19" id="1Es-1X-43o"/>
+                                    <constraint firstAttribute="bottom" secondItem="3XI-9X-vHm" secondAttribute="bottom" constant="13" id="7rR-yi-ZuH"/>
+                                    <constraint firstItem="3XI-9X-vHm" firstAttribute="top" secondItem="gbJ-C0-qZi" secondAttribute="top" constant="13" id="cSS-py-a5w"/>
+                                    <constraint firstItem="S2g-zK-GtB" firstAttribute="centerY" secondItem="j3T-a8-ZXA" secondAttribute="centerY" id="eXd-D6-txx"/>
+                                    <constraint firstAttribute="trailing" secondItem="S2g-zK-GtB" secondAttribute="trailing" id="iwm-Zv-KHc"/>
+                                    <constraint firstItem="S2g-zK-GtB" firstAttribute="leading" secondItem="j3T-a8-ZXA" secondAttribute="trailing" constant="8" id="jGI-2P-fgE"/>
+                                    <constraint firstItem="j3T-a8-ZXA" firstAttribute="centerY" secondItem="3XI-9X-vHm" secondAttribute="centerY" id="jhH-A6-c3T"/>
+                                    <constraint firstItem="3XI-9X-vHm" firstAttribute="leading" secondItem="gbJ-C0-qZi" secondAttribute="leading" id="vat-w8-yjQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gbJ-C0-qZi" secondAttribute="trailing" constant="8" id="HC4-9j-v2n"/>
+                            <constraint firstItem="gbJ-C0-qZi" firstAttribute="leading" secondItem="OHd-iu-hvf" secondAttribute="leading" constant="8" id="JmT-dH-gBk"/>
+                            <constraint firstItem="gbJ-C0-qZi" firstAttribute="top" secondItem="lvY-9g-Jv6" secondAttribute="bottom" constant="50" id="K7a-NY-LsY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4bf-9K-zcq">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="DsR-hK-h2o">
+                            <connections>
+                                <action selector="cancelClicked:" destination="In9-Aq-RWS" id="lfJ-ZU-XLr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="qFJ-t7-T5E">
+                            <connections>
+                                <action selector="saveClicked:" destination="In9-Aq-RWS" id="s27-EB-dKC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="starNumber" destination="S2g-zK-GtB" id="vdw-4C-Kne"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhL-TO-Uf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920.8000000000002" y="-411.544227886057"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FpP-oR-azb">
@@ -172,6 +252,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dru-y2-L7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-557"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ePC-gW-WCk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zg0-pd-9ff" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K8C-3Y-Wrr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="In9-Aq-RWS" kind="relationship" relationship="rootViewController" id="CZR-Od-doX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N5Y-Ow-iMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981.5999999999999" y="-412.44377811094455"/>
         </scene>
     </scenes>
     <resources>
